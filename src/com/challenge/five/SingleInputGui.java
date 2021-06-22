@@ -1,7 +1,5 @@
 package com.challenge.five;
 
-import jade.core.Agent;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
