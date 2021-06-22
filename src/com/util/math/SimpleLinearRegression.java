@@ -1,7 +1,7 @@
 package com.util.math;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class SimpleLinearRegression {
     private ArrayList<Double> xs;
@@ -10,7 +10,7 @@ public class SimpleLinearRegression {
     private double y_avarage;
     private double betha;
     private double betha_zero;
-    private double y;
+    // private double y;
 
     public SimpleLinearRegression(ArrayList<Double> xs, ArrayList<Double> ys) {
 	this.xs = xs;
@@ -39,7 +39,7 @@ public class SimpleLinearRegression {
 	return betha_zero + betha * x_input;
     }
 
-    // TODO(Misael): Don't like to print anything to the console from
+    // NOTE(Misael): Don't like to print anything to the console from
     // a class...
     public void printData(double x_input) {
 	System.out.println(String.format("X avarage is %f", x_avarage));
