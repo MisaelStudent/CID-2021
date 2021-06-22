@@ -1,7 +1,9 @@
 @echo off
 if "%1" == "three" (
     java -cp lib/jade.jar;classes/ jade.Boot -gui misael:com.challenge.three.BookSellerAgent
-) 
+) else if "%1" == "six" (
+    java -cp lib/jade.jar;classes/ com.challenge.six.MultiLinearRegressionCramer
+)
 rem elif [[ $1 = "4" ]]; then
 rem    java -cp classes/ com.challenge.four.Main $2
 rem elif [[ $1 = "5" ]]; then
