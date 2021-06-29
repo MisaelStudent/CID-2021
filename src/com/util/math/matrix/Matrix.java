@@ -67,11 +67,11 @@ public class Matrix {
 		return r1 - r2;
 	}
 
-	private void setValue(int row, int col, double value) {
+	public void setValue(int row, int col, double value) {
 		x[row][col] = value;
 	}
 
-	private double getValue(int row, int col) {
+	public double getValue(int row, int col) {
 		return x[row][col];
 	}
 
