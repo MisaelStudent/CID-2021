@@ -10,6 +10,9 @@ then
 elif [[ $1 = "5" ]]
 then
     javac -cp lib/jade.jar src/com/challenge/five/*.java src/com/util/math/*.java -d classes/
+elif [[ $1 = "seven" ]]
+then
+    javac -cp lib/jade.jar src/com/challenge/seven/*.java src/com/util/math/*.java src/com/util/math/matrix/*.java -d classes/
 else
     echo "Pass number of challenge to build"
 fi

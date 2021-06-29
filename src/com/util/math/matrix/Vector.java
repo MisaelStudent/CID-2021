@@ -26,4 +26,13 @@ public class Vector {
 	public int getCount() {
 		return x.length;
 	}
+
+	public String toString() {
+		String s = "{";
+		for (double i : x) {
+			s += i + ",";
+		}
+		s += "}";
+		return s;
+	}
 }

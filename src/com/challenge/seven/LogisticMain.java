@@ -1,5 +1,5 @@
 package com.challenge.seven;
 
-public class LogisticMain {
-	
+public class LogisticMain  {
+
 }
