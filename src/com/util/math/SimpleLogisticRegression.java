@@ -7,14 +7,14 @@ public class SimpleLogisticRegression {
 	private Matrix m;
 	private double range;
 	private int    loops;
-	private double correction;
+	private double rate;
 	private Vector categorial;
 
 	public SimpleLogisticRegression(Matrix x, Vector y) {
 		m = x;
 		range = 0.5;
 		loops = 100;
-		correction = 0.1;
+		rate = 0.01;
 		categorial = y;
 	}
 
@@ -37,7 +37,7 @@ public class SimpleLogisticRegression {
 				for (int col = 0; col < cols_count; col++) {
 					total += (matrixFunction(m, result, col) - y.get(col)) * m.getValue(row, col);
 				}
-				result.set(result.get(row) - correction * total, row);
+				result.set(result.get(row) - rate * total, row);
 			}	
 		}
 
@@ -45,7 +45,7 @@ public class SimpleLogisticRegression {
 	}
 
 	boolean inRange(double value) {
-		return value < range;
+		return value > range;
 	}
 
 	double vectorFunction(Vector a, Vector b) {
@@ -57,8 +57,8 @@ public class SimpleLogisticRegression {
 	}
 
 	double matrixFunction(Matrix m, Vector v, int i) {
-		double result = v.get(i);
-		int count = m.getColCount();
+		double result = v.get(0);
+		int count = m.getRowCount();
 		for (int index = 1; index < count; index++) {
 			result += m.getValue(index, i) * v.get(index);
 		}

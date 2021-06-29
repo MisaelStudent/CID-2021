@@ -22,9 +22,10 @@ public class LogisticGui extends JFrame
         p.add(new JLabel("Inputs:"));
         inputsField = new JTextField(15);
         p.add(inputsField);
-        // p.add(new JLabel("Input Y:"));
-        // inputYField = new JTextField(15);
-        // p.add(inputYField);
+        p.add(new JLabel("Repeats: "));
+        inputRepeatsField = new JTextField(15);
+        inputRepeatsField.setText("100");
+        p.add(inputRepeatsField);
 
         getContentPane().add(p, BorderLayout.CENTER);
         JButton addButton = new JButton("Accept");

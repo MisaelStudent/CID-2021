@@ -57,12 +57,18 @@ public class LogisticAgent extends Agent implements SingleInputInterface
             LogisticInput input = (LogisticInput)object;
             addBehaviour(new OneShotBehaviour() {
                     public void action() {
-                        Matrix m  = new Matrix(3, 3).setMatrixArray(new double[][] {
-                                {1, 1, 1},
-                                {1, 4, 2},
-                                {1, 2, 4}
+                        Matrix m  = new Matrix(9, 3).setMatrixArray(new double[][] {
+                                {780, 4,   3},
+                                {750, 3.9, 4},
+                                {690, 3.3, 3},
+                                {710, 3.7, 5},
+                                {680, 3.9, 4},
+                                {730, 3.7, 6},
+                                {690, 2.3, 1},
+                                {720, 3.3, 4},
+                                {740, 3.3, 5},
                             });
-                        Vector y = new Vector(new double[] {0, 1, 1});
+                        Vector y = new Vector(new double[] {1, 1, 0, 1, 0, 1, 0, 1, 1});
                         SimpleLogisticRegression slr = new SimpleLogisticRegression(m, y);
                         String result = slr.calculate(input.inputs);
                         System.out.println(result);
